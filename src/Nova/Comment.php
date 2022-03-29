@@ -5,6 +5,7 @@ namespace KirschbaumDevelopment\NovaComments\Nova;
 use Laravel\Nova\Resource;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Waynestate\Nova\CKEditor;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\MorphTo;
 use Laravel\Nova\Fields\DateTime;
@@ -47,10 +48,18 @@ class Comment extends Resource
     public function fields(Request $request)
     {
         return [
-            Textarea::make('comment')
+            // Textarea::make('comment')
+            //     ->alwaysShow()
+            //     ->hideFromIndex(),
+            CKEditor::make('comment')
                 ->alwaysShow()
-                ->hideFromIndex(),
-
+                ->hideFromIndex()
+                ->rules('required')
+                ->withMeta([
+                    'extraAttributes' => [
+                       'data-lpignore' => 'true',
+                    ],
+                ]),
             MorphTo::make('Commentable')->onlyOnIndex(),
 
             Text::make('comment')
