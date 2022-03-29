@@ -51,6 +51,7 @@ class Comment extends Resource
             // Textarea::make('comment')
             //     ->alwaysShow()
             //     ->hideFromIndex(),
+            // TODO which?
             CKEditor::make('comment')
                 ->alwaysShow()
                 ->hideFromIndex()
