@@ -8,7 +8,7 @@
             <div class="flex border-b border-40 remove-bottom-border px-8">
                 <div class="w-full pt-6 pb-2">
                     <h4 class="font-normal text-80">
-                        Write new comment HERE BE WE
+                        Write new comment
                     </h4>
 
                     <textarea class="w-full form-control form-input form-input-bordered py-3 h-auto mt-2"

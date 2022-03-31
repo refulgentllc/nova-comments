@@ -582,7 +582,7 @@ var render = function() {
           _c("div", { staticClass: "w-full pt-6 pb-2" }, [
             _c("h4", { staticClass: "font-normal text-80" }, [
               _vm._v(
-                "\n                    Write new comment HERE BE WE\n                "
+                "\n                    Write new comment\n                "
               )
             ]),
             _vm._v(" "),
