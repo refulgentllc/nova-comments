@@ -305,7 +305,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -600,16 +599,6 @@ var render = function() {
               attrs: { id: "commenter", dusk: "commenter", rows: "5" },
               domProps: { value: _vm.comment },
               on: {
-                keyup: function($event) {
-                  if (
-                    !$event.type.indexOf("key") &&
-                    $event.keyCode !== 93 &&
-                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                  ) {
-                    return null
-                  }
-                  return _vm.createComment.apply(null, arguments)
-                },
                 input: function($event) {
                   if ($event.target.composing) {
                     return
