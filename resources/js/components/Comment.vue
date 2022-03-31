@@ -41,7 +41,7 @@
             commenterUrl() {
                 let commenterId = _.find(this.comment.fields, { attribute: 'commenter' }).belongsToId;
 
-                return `/nova/resources/users/${commenterId}`;
+                return `/resources/users/${commenterId}`;
             },
 
             date() {

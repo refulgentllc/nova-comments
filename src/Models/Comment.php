@@ -44,4 +44,12 @@ class Comment extends Model
     {
         return $this->belongsTo(config('auth.providers.users.model'), 'commenter_id');
     }
+    // /**
+    //  * The event map for the model.
+    //  *
+    //  * @var array
+    //  */
+    // protected $dispatchesEvents = [
+    //     'saved' => CommentObserver::class,
+    // ];
 }

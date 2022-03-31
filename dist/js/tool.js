@@ -487,7 +487,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         commenterUrl: function commenterUrl() {
             var commenterId = _.find(this.comment.fields, { attribute: 'commenter' }).belongsToId;
 
-            return '/nova/resources/users/' + commenterId;
+            return '/resources/users/' + commenterId;
         },
         date: function date() {
             var now = moment();
@@ -582,7 +582,7 @@ var render = function() {
           _c("div", { staticClass: "w-full pt-6 pb-2" }, [
             _c("h4", { staticClass: "font-normal text-80" }, [
               _vm._v(
-                "\n                    Write new comment HERE\n                "
+                "\n                    Write new comment HERE BE WE\n                "
               )
             ]),
             _vm._v(" "),
