@@ -61,7 +61,8 @@ class Comment extends Resource
                 ->onlyOnIndex(),
             Boolean::make('Edited')->default(false),
             BelongsTo::make('Commenter', 'commenter', config('nova-comments.commenter.nova-resource'))
-                ->exceptOnForms(),
+                // ->exceptOnForms()
+                ,
 
             DateTime::make('Created', 'created_at')
                 ->format(config('nova-comments.date-format'))
