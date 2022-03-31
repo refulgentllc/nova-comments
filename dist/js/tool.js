@@ -176,8 +176,7 @@ module.exports = function normalizeComponent (
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(2);
-module.exports = __webpack_require__(9);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
@@ -327,7 +326,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     mounted: function mounted() {
-        this.getComments(this.commentsUri);        
+        this.getComments(this.commentsUri);
     },
 
 
@@ -583,7 +582,7 @@ var render = function() {
           _c("div", { staticClass: "w-full pt-6 pb-2" }, [
             _c("h4", { staticClass: "font-normal text-80" }, [
               _vm._v(
-                "\n                    Write new comment\n                "
+                "\n                    Write new comment HERE\n                "
               )
             ]),
             _vm._v(" "),
@@ -609,7 +608,7 @@ var render = function() {
                   ) {
                     return null
                   }
-                  return _vm.createComment($event)
+                  return _vm.createComment.apply(null, arguments)
                 },
                 input: function($event) {
                   if ($event.target.composing) {
@@ -721,12 +720,6 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-68ff5483", module.exports)
   }
 }
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
