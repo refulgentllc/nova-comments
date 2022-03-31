@@ -59,7 +59,7 @@ class Comment extends Resource
                     return Str::limit($comment, config('nova-comments.limit'));
                 })
                 ->onlyOnIndex(),
-            Boolean::make('Edited')->alwaysShow()->default(false),
+            Boolean::make('Edited')->default(false),
             BelongsTo::make('Commenter', 'commenter', config('nova-comments.commenter.nova-resource'))
                 ->exceptOnForms(),
 
