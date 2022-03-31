@@ -16,6 +16,7 @@
                         dusk="commenter"
                         rows="5"
                         v-model="comment"
+                        @keyup.enter.93="createComment"
                         >
                     </textarea>
                 </div>
