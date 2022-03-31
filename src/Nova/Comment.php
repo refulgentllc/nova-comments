@@ -6,6 +6,7 @@ use Laravel\Nova\Resource;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\MorphTo;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Textarea;
@@ -58,7 +59,7 @@ class Comment extends Resource
                     return Str::limit($comment, config('nova-comments.limit'));
                 })
                 ->onlyOnIndex(),
-
+            Boolean::make('Edited')->default(false)->alwaysShow(),
             BelongsTo::make('Commenter', 'commenter', config('nova-comments.commenter.nova-resource'))
                 ->exceptOnForms(),
 
