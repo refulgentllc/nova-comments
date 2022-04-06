@@ -313,7 +313,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 
-hasMedia = false;
+// hasMedia = false; 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['resourceName', 'resourceId', 'field'],
 
