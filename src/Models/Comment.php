@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    use InteractsWithMedia ;
     /**
      * The table associated with the model.
      *
