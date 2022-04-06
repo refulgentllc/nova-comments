@@ -69,7 +69,7 @@
 
 <script>
     import Comment from './Comment';
-    // hasMedia = false; 
+   var hasMedia = false; 
     export default {
         props: ['resourceName', 'resourceId', 'field'],
 
