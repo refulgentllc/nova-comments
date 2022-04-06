@@ -17,10 +17,12 @@
                         rows="5"
                         v-model="comment">
                     </textarea>
-                    <button>
-                        Add Image
-                    </button>
                 </div>
+                <button class="btn btn-default btn-primary inline-flex items-center relative mt-4"
+                    type="submit">
+                    
+                    Add Image\Files
+                </button>
             </div>
 
             <div class="flex justify-between px-8 pb-4 border-b border-40">

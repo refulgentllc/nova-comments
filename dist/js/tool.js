@@ -308,6 +308,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -609,12 +611,22 @@ var render = function() {
                   _vm.comment = $event.target.value
                 }
               }
-            }),
-            _vm._v(" "),
-            _c("button", [
-              _vm._v("\n                    Add Image\n                ")
-            ])
-          ])
+            })
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "btn btn-default btn-primary inline-flex items-center relative mt-4",
+              attrs: { type: "submit" }
+            },
+            [
+              _vm._v(
+                "\n                \n                Add Image\\Files\n            "
+              )
+            ]
+          )
         ]
       ),
       _vm._v(" "),
