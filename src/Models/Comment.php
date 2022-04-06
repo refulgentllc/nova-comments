@@ -2,6 +2,11 @@
 
 namespace KirschbaumDevelopment\NovaComments\Models;
 
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\Models\Media ;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media as MediaCollection;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
@@ -27,6 +32,12 @@ class Comment extends Model
                 }
             }
         );
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('comments-image');
+        $this->addMediaCollection('comments-attach');
     }
 
     /**

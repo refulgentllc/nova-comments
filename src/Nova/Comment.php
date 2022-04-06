@@ -11,6 +11,8 @@ use Laravel\Nova\Fields\MorphTo;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
+use Ebess\AdvancedNovaMediaLibrary\Fields\Files;
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use KirschbaumDevelopment\NovaComments\Models\Comment as CommentModel;
 
 class Comment extends Resource
@@ -80,6 +82,15 @@ class Comment extends Resource
                 ->format(config('nova-comments.date-format'))
                 ->exceptOnForms()
                 ->sortable(),
+            Images::make('Images', 'tickets-image')
+                // ->conversionOnIndexView('thumb')
+                ->enableExistingMedia()
+                // ->croppingConfigs(['ratio' => 4/3])
+                ,
+            Files::make('Attachments', 'tickets-attach')
+                // ->conversionOnIndexView('thumb')
+                ->enableExistingMedia()
+                // ->croppingConfigs(['ratio' => 4/3])
         ];
     }
 
