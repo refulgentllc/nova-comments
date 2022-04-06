@@ -17,6 +17,9 @@
                         rows="5"
                         v-model="comment">
                     </textarea>
+                    <button>
+                        Add Image
+                    </button>
                 </div>
             </div>
 
