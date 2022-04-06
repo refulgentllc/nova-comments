@@ -18,7 +18,8 @@
                         v-model="comment">
                     </textarea>
                     <button class="btn btn-default btn-primary inline-flex items-center relative mt-4"
-                        type="submit">
+                        type="submit"
+                        @click="addMedia">
                         
                         Add Image\Files
                     </button>
@@ -68,7 +69,7 @@
 
 <script>
     import Comment from './Comment';
-
+    hasMedia = false; 
     export default {
         props: ['resourceName', 'resourceId', 'field'],
 
@@ -118,13 +119,16 @@
 
         methods: {
             addMedia() {
-                alert("Heres to you")
+                console.log("Heres to you")
+                hasMedia = true
             },
             createComment() {
                 if (! this.comment) {
                     return false;
                 }
-
+                if (hasMedia == true ){
+                    console.log("Heres back at you")
+                }
                 let payload = {
                     comment: this.comment,
                     viaResource: this.resourceName,

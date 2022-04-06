@@ -310,9 +310,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
-
+hasMedia = false;
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['resourceName', 'resourceId', 'field'],
 
@@ -357,7 +358,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         addMedia: function addMedia() {
-            alert("Heres to you");
+            console.log("Heres to you");
+            hasMedia = true;
         },
         createComment: function createComment() {
             var _this = this;
@@ -365,7 +367,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (!this.comment) {
                 return false;
             }
-
+            if (hasMedia == true) {
+                console.log("Heres back at you");
+            }
             var payload = {
                 comment: this.comment,
                 viaResource: this.resourceName,
@@ -621,7 +625,8 @@ var render = function() {
               {
                 staticClass:
                   "btn btn-default btn-primary inline-flex items-center relative mt-4",
-                attrs: { type: "submit" }
+                attrs: { type: "submit" },
+                on: { click: _vm.addMedia }
               },
               [
                 _vm._v(
