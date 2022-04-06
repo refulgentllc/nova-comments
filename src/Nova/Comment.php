@@ -24,7 +24,7 @@ class Comment extends Resource
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public static function indexQuery(NovaRequest $request, $query)
+    public static function indexQuery(\Laravel\Nova\Http\Requests\NovaRequest $request, $query)
     {
         if ($request->user()->isAdmin()) {
             return $query;
