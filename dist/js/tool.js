@@ -305,6 +305,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -606,7 +609,11 @@ var render = function() {
                   _vm.comment = $event.target.value
                 }
               }
-            })
+            }),
+            _vm._v(" "),
+            _c("button", [
+              _vm._v("\n                    Add Image\n                ")
+            ])
           ])
         ]
       ),
