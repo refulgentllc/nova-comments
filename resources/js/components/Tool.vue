@@ -8,7 +8,7 @@
             <div class="flex border-b border-40 remove-bottom-border px-8">
                 <div class="w-full pt-6 pb-2">
                     <h4 class="font-normal text-80">
-                        Write new comment
+                        Write new comment  HELLO
                     </h4>
 
                     <textarea class="w-full form-control form-input form-input-bordered py-3 h-auto mt-2"
@@ -26,17 +26,17 @@
                 </div>
             </div>
 
-            <div class="flex justify-between px-8 pb-4 border-b border-40">
-                <div class="help-text">
-                    On MacOS, press ⌘ + Enter to save
-                </div>
-
-                <button class="btn btn-default btn-primary inline-flex items-center relative mt-4"
-                    type="submit"
-                    @click="createComment">
-                    Save Comment
-                </button>
+        <div class="flex justify-between px-8 pb-4 border-b border-40">
+            <div class="help-text">
+                On MacOS, press ⌘ + Enter to save
             </div>
+
+            <button class="btn btn-default btn-primary inline-flex items-center relative mt-4"
+                type="submit"
+                @click="createComment">
+                Save Comment
+            </button>
+        </div>
 
             <div class="flex border-b border-40 remove-bottom-border px-8" v-if="hasComments">
                 <div class="w-full py-6">

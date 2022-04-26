@@ -593,7 +593,7 @@ var render = function() {
           _c("div", { staticClass: "w-full pt-6 pb-2" }, [
             _c("h4", { staticClass: "font-normal text-80" }, [
               _vm._v(
-                "\n                    Write new comment\n                "
+                "\n                    Write new comment  HELLO\n                "
               )
             ]),
             _vm._v(" "),
@@ -643,9 +643,7 @@ var render = function() {
         { staticClass: "flex justify-between px-8 pb-4 border-b border-40" },
         [
           _c("div", { staticClass: "help-text" }, [
-            _vm._v(
-              "\n                On MacOS, press ⌘ + Enter to save\n            "
-            )
+            _vm._v("\n            On MacOS, press ⌘ + Enter to save\n        ")
           ]),
           _vm._v(" "),
           _c(
@@ -656,7 +654,7 @@ var render = function() {
               attrs: { type: "submit" },
               on: { click: _vm.createComment }
             },
-            [_vm._v("\n                Save Comment\n            ")]
+            [_vm._v("\n            Save Comment\n        ")]
           )
         ]
       ),
